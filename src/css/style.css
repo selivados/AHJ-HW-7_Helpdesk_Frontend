@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+h5, ul, p {
+  padding: 0;
+  margin: 0;
+}
+
+.desk-container {
+  width: 1000px;
+  margin: 25px auto 0;
+  padding: 0 15px
+}
+
+.desk-control {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color:  #5ca84d;
+}
+
+.add-button:hover,
+.ok-button:hover {
+  background-color: #3e8621;
+}
+
+.tickets-list {
+  list-style: none;
+}
+
+.ticket {
+  display: flex;
+  padding: 8px 24px 8px 16px;
+  border: 1px solid #dee2e6;
+}
+
+.ticket:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ticket + .ticket {
+  border-top-width: 0;
+}
+
+.ticket:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ticket-status {
+  width: 7%;
+}
+
+.ticket-content {
+  width: 65%;
+}
+
+.ticket-name {
+  padding-right: 20px;
+}
+
+.ticket-description {
+  padding-right: 20px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.ticket-datetime {
+  width: 20%;
+}
+
+.ticket-control {
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
+}
+
+.ticket-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.ticket-button:hover {
+  opacity: 1;
+}
+
+.check {
+  background-image: url(../img/status.png);
+}
+
+.edit-button {
+  background-image: url(../img/edit.png);
+}
+
+.delete-button {
+  background-image: url(../img/delete.png);
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.07);
+  z-index: 10000;
+}
+
+.modal-content {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 15px;
+}
+
+.modal-title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  margin-bottom: 15px;
+}
+
+.form-name {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  outline: 1px solid #86b7fe;
+  outline-offset: -1px;
+}
+
+.description {
+  min-height: 100px;
+  resize: vertical;
+  appearance: none;
+}
+
+.modal-control {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ok-button {
+  margin-left: 15px;
+  background-color:  #5ca84d;
+}
+
+.cancel-button {
+  background-color: #b1b1b1;
+}
+
+.cancel-button:hover {
+  background-color: #8f8f8f;
+}
+
+.modal-text {
+  margin-bottom: 20px;
+  line-height: 25px;
+}
