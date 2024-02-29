@@ -67,11 +67,10 @@ export default class Desk {
       const { id } = target.closest('.ticket');
 
       if (target.classList.contains('status-button')) {
-        const newStatus = !ticket.querySelector('.check');
-        const newTicketData = { status: newStatus };
-
-        await TicketService.update(id, newTicketData);
         target.classList.toggle('check');
+        const newStatus = !!ticket.querySelector('.check');
+        const newTicketData = { status: newStatus };
+        await TicketService.update(id, newTicketData);
       } else if (target.classList.contains('edit-button')) {
         const updateModal = new UpdateTicketModal(this.modalContainer, id);
         await updateModal.init();
